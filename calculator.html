@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <div class="calculator"><input class="display"  id="display"readonly>
+<div class="keys">
+  <button onclick="dis(7)">7</button>
+   <button onclick="dis(8)">8</button>
+  <button onclick="dis(9)">9</button>
+   <button class="op"onclick="dis('/')">÷</button>
+    <button onclick="dis(4)">4</button>
+   <button onclick="dis(5)">5</button>
+  <button onclick="dis(6)">6</button>
+   <button class="op"onclick="dis('*')">x</button>
+    <button onclick="dis(1)">1</button>
+   <button onclick="dis(2)">2</button>
+    <button onclick="dis(3)">3</button>
+  <button class="op"onclick="dis('-')">-</button>
+   <button onclick="dis(0)">0</button>
+    <button onclick="dis('.')">.</button>
+     <button class="ans"onclick="ans()">=</button>
+    <button class="op" onclick="dis('+')">+</button>
+     <button class="clar"onclick="clar()">C</button></div></div>
+     <style>
+     .calculator {
+       border:2px solid black
+     }
+       .keys{
+         display:grid;
+         grid-template-columns:repeat(4,auto);background:honeydew;
+       }
+       button{
+         height:55px;width:55px;border:none;margin:1px;background:black;color:white;border-radius:10px
+       }
+       .display{
+         width:333px;
+         height:40px;border:2px solid black;
+       }
+       .op{
+         background:orange;
+       }
+       .clar{
+         background:pink;
+       }
+       .ans{
+         background:darkgreen;
+       }
+     </style>
+     <script>
+       var display=document.getElementById("display")
+       function dis(input){
+         display.value += input
+         // This is a single-line JavaScript comment
+
+/*
+  plus equal to so that if there is no plus and I want to add 9+9 only 9 will come no number will come near to it
+*/
+
+         
+       }
+       function clar(){
+         display.value = '';
+       }
+       function ans(){
+         display.value=eval(display.value)
+       }
+     </script>
+</body>
+
+</html>
